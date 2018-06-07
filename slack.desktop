@@ -1,0 +1,7 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Name=Slack
+Type=Application
+Icon=/home/sadikur/Desktop/246x0w.png
+Exec=/snap/bin/slack
