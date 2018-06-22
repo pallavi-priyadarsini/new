@@ -13,19 +13,19 @@
 
 <body>
   <form action="insert.php" method="POST">
-  <div class="container">
-    <style>
-      .container {
-        border: 2px solid black;
-        border-radius: 10px;
-        background-color: peachpuff;
-      }
-    </style>
+    <div class="container">
+      <style>
+        .container {
+          border: 2px solid black;
+          border-radius: 10px;
+          background-color: peachpuff;
+        }
+      </style>
       <h1 class="title is-4 has-text-centered">HTML FORMS</h1>
       <div class="field">
         <label class="label">firstName</label>
         <div class="control has-icons-left">
-          <input class="input is-success" name="firstname"  type="text" required placeholder="enter first name">
+          <input class="input is-success" name="firstname" type="text" required placeholder="enter first name">
           <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </span>
@@ -34,7 +34,7 @@
       <div class="field">
         <label class="label">lastname</label>
         <div class="control has-icons-left">
-          <input class="input is-info" name="lastname"  type="text" required placeholder="enter last name">
+          <input class="input is-info" name="lastname" type="text" required placeholder="enter last name">
           <span class="icon is-small is-left">
             <i class="fas fa-user"></i>
           </span>
@@ -44,7 +44,7 @@
         <label class="label">Email</label>
 
         <div class="control has-icons-left">
-          <input class="input is-success " type="email" required placeholder="Email input" name="email" >
+          <input class="input is-success " type="email" required name="email" placeholder="type your email here">
           <span class="icon is-small is-left">
             <i class="fas fa-envelope"></i>
           </span>
@@ -52,40 +52,38 @@
       </div>
       <div class="field">
         <label class="label">password</label>
-        <div class="control has-icons-left">     
-        
+        <div class="control has-icons-left">
+
           <input class="input" id="password" type="password" required placeholder="input password">
           <span class="icon is-small is-left">
-                <i class="fas fa-lock"></i>
-              </span>
-              </div>
+            <i class="fas fa-lock"></i>
+          </span>
         </div>
-        
-        <div class="field">
-          <label class="label">hobbies</label>
-          <div class="control">
-            <textarea class="textarea is-warning" required placeholder="Textarea" name="hobbies"></textarea>
-          </div>
-      </div>  
+      </div>
 
-  <div class="field">
-    <div class="control">
-      <label class="label">Gender</label>
-      <label class="radio">
-        <input type="radio" name="gender"  value="male">
-        male
-      </label>
-      <label class="radio">
-        <input type="radio" name="gender" value="female">
-       female
-      </label>
+      <div class="field">
+        <label class="label">hobbies</label>
+        <div class="control">
+          <textarea class="textarea is-warning" required placeholder="Textarea" name="hobbies"></textarea>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <label class="label">Gender</label>
+          <label class="radio">
+            <input type="radio" name="gender" value="male"> male
+          </label>
+          <label class="radio">
+            <input type="radio" name="gender" value="female"> female
+          </label>
+        </div>
+      </div>
+
+      <input type="submit" value="Submit" name="submit_form" />
+
     </div>
-  </div>
-   
-  <input type="submit" value="Submit" name="submit_form"/>
-
-  </div>
-</form>
+  </form>
 </body>
 
 </html>

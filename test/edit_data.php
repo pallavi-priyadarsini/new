@@ -16,38 +16,33 @@
   <?php
   ini_set('display_errors', '1');
             require_once('dbcon.php');
-            if (isset($_POST["back"])) {
-                header("Location:display.php");
-            }
             $id=$_GET["form_id"];
-            if (isset($_POST["update"])) {
+            if (isset($_POST["update"])) 
+            {
                 $firstname=$_POST["firstname"];
                 $lastname=$_POST["lastname"];
                 $email=$_POST["email"];
                 $hobbies=$_POST["hobbies"];
                 $gender=$_POST["gender"];
-                try {
+                try 
+                {
                     $sql ="UPDATE form SET firstname= '$firstname',lastname= '$lastname', email= '$email', hobbies='$hobbies', gender='$gender' WHERE form_id='$id'";
-
                     $stmt = $conn->prepare($sql);
-                    
                     // execute the query
                     $stmt->execute();
                     header("Location:display.php");
 
-                    }
+                }
                 catch(PDOException $e)
-                    {
+                {
                     echo $sql . "<br>" . $e->getMessage();
-                    }
+                }
 
-                //$conn = null;
             }
-
                 $qry = $conn->prepare("SELECT * from form WHERE form_id='$id'"); 
                 $qry->execute();
                 $result = $qry->fetch();
-            ?>
+  ?>
   <div class="container">
     <style>
       .container {
@@ -118,8 +113,7 @@
   </div>
    
   <input type="submit" value="Submit" name="update"/>
-
-  </div>
+  
 </form>
 </body>
 

@@ -1,21 +1,20 @@
 
-
 <?php
 require_once('dbcon.php');
 ini_set('display_errors', '1');
-try {
+try 
+{
     $form_id = $_GET['form_id'];
     $sql = "SELECT form_id,firstname,lastname,email,hobbies,gender FROM form WHERE form_id ='$form_id'";
+    $q = $conn->query($sql);
+    $q->setFetchMode(PDO::FETCH_ASSOC);
 
-
-$q = $conn->query($sql);
-
- $q->setFetchMode(PDO::FETCH_ASSOC);
-
-} catch (PDOException $e) {
+} 
+catch (PDOException $e) 
+{
     die("Could not connect to the database $dbname :" . $e->getMessage());
 }
-   ?>
+?>
 <!DOCTYPE html>
 <html>
     <head>

@@ -1,16 +1,16 @@
 <?php
 require_once('dbcon.php');
- //displaying 
-try {
-$sql = 'SELECT * FROM form ORDER BY form_id';
-$q = $conn->query($sql);
-$q->execute();
-$q->setFetchMode(PDO::FETCH_ASSOC);
-
-} catch (PDOException $e) {
+try 
+{
+   $sql = 'SELECT * FROM form ORDER BY form_id';
+   $q = $conn->query($sql);
+   $q->execute();
+   $q->setFetchMode(PDO::FETCH_ASSOC);
+} 
+catch (PDOException $e) 
+{
     die("Could not connect to the database $dbname :" . $e->getMessage());
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,11 +20,11 @@ $q->setFetchMode(PDO::FETCH_ASSOC);
     </head>
     <body>
         <div class="container">
-            <h1 class="title is-4 has-text-centered">DISPLAYED DATA:-</h1>
+            <h1 class="title is-6 ">DISPLAYED DATA:-</h1>
             <table class="table is-bordered">
                 <thead>
                     <tr>
-                        <th>First Name</th>
+                        <th>USER LISTS:-</th>
                     </tr>
                 </thead>
                 <tbody>
